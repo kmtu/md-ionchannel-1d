@@ -1,0 +1,25 @@
+timesteps: 5000			#picosecond
+delta timestep: 1
+simulation size: 1000.		#angstrom
+number of atoms: 10
+
+#particle generation
+poisson waiting rate: 0.1
+poisson waiting lower bound: 5 #minimum waiting time
+generating position: 50
+generating distance cut: 50
+
+current probe position: 1000
+viscosity: 1.
+
+fixed potential: gaussian
+3
+-50 25 200
+-50 25 500
+-50 25 800
+
+fixed potential: bias_voltage	#startPos, endPos, voltage(mV)
+0 1000 0
+
+gnuplot: boundings
+0 1000 -60 20
